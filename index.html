@@ -213,11 +213,23 @@ section{position:relative;z-index:1;padding:4.5rem 1.5rem}
 
 /* ── VIDEO ── */
 #video-section{background:linear-gradient(180deg,var(--bg) 0%,var(--bg2) 50%,var(--bg) 100%)}
+.video-wrap{margin-top:2rem;display:flex;justify-content:center}
+.video-reel{
+  width:100%;max-width:380px;
+  border:1px solid rgba(201,168,76,.18);
+  border-radius:6px;overflow:hidden;
+  background:#0a0010;
+  position:relative;
+}
+.video-reel iframe{
+  width:100%;height:680px;display:block;border:none;
+}
 .video-frame{
-  position:relative;width:100%;padding-bottom:56.25%;
+  position:relative;width:100%;max-width:800px;
+  padding-bottom:56.25%;
   background:#0a0010;
   border:1px solid rgba(201,168,76,.18);
-  border-radius:3px;overflow:hidden;margin-top:2rem;
+  border-radius:3px;overflow:hidden;
 }
 .video-frame iframe,.video-frame video{
   position:absolute;top:0;left:0;width:100%;height:100%;border:none;
@@ -566,11 +578,30 @@ footer{
         ══════════════════════════════════════════════════
       -->
 
-      <!-- PLACEHOLDER — remova quando tiver o vídeo -->
-      <div class="video-placeholder">
-        <div class="vp-play">▶</div>
-        <p class="vp-label">Vídeo de apresentação</p>
+    <div class="video-wrap">
+
+      <!-- ── INSTAGRAM REEL (ativo agora) ── -->
+      <div class="video-reel">
+        <iframe
+          src="https://www.instagram.com/reel/DZSg6gUx4Mg/embed/"
+          frameborder="0"
+          scrolling="no"
+          allowtransparency="true"
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+          loading="lazy">
+        </iframe>
       </div>
+
+      <!--
+        ── VÍDEO DIRETO (ativar quando tiver o arquivo) ──
+        1. Sobe o arquivo MP4 no GitHub com o nome: video-marilia.mp4
+        2. Descomente o bloco abaixo e comente o bloco do Instagram acima
+
+        <div class="video-frame">
+          <video src="video-marilia.mp4" controls poster="foto-marilia.jpg"></video>
+        </div>
+      -->
+
     </div>
   </div>
 </section>
@@ -582,20 +613,7 @@ footer{
   <div class="who-inner">
 
     <div class="who-photo wake">
-      <!--
-        ══════════════════════════════════
-        FOTO DE MARILIA: quando tiver a foto, substitua todo
-        o conteúdo aqui dentro por:
-        <img src="foto-marilia.jpg" alt="Marilia de Padilha">
-        ══════════════════════════════════
-      -->
-      <div class="who-placeholder">
-        <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="40" cy="30" r="18" stroke="rgba(201,168,76,0.4)" stroke-width="1"/>
-          <path d="M10 72c0-16.569 13.431-30 30-30s30 13.431 30 30" stroke="rgba(201,168,76,0.3)" stroke-width="1"/>
-        </svg>
-        <span>Foto de Marilia</span>
-      </div>
+      <img src="foto-marilia.jpg" alt="Marilia de Padilha">
     </div>
 
     <div class="who-content wake wake-delay">
